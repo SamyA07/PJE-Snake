@@ -3,7 +3,7 @@
 AMEUR Samy
 SENHAJI Taha
 
-Dans le dossier joystick1 :
+Dans le dossier joystick1 : \n
 Version du jeu snake avec joystick sans le bon usage du COMET -> beaucoup de requêtes au niveau du client vers le serveur.
 Page html : index.html
 Javascript : res/k_serpent.js
