@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<title>Snake</title>
+<head>
+  <link rel="stylesheet" href="res/k_serpent.css"type="text/css" />
+  <script type="text/javascript" src="res/k_serpent.js"></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script language="Javascript" type="text/javascript">
+    function ajaxGetPrenom() {
+    var xhr;
+    try{ 
+    xhr = new XMLHttpRequest(); 
+    }
+    catch(e){ 
+    xhr = new ActiveXObject('Microsoft.XMLHTTP'); 
+    }
+    var prenom = document.getElementById("prenom").value;
+    xhr.open("GET", "afficher?prenom= ".concat(prenom), true);   
+    xhr.send(null);
+    }
+    
+  </script>
+  <div id="demandePrenom">
+    <p> Entrez votre prénom </p>
+    <input type="text" name="prenom" id="prenom" />
+    <input type="submit" onclick="javascript:ajaxGetPrenom();"/>
+    <select id="level" onChange="fin()">
+      <option value=1 id="level1">Level 1</option>
+      <option value=2 id="level2">Level 2</option>
+      <option value=3 id="level3">Level 3</option>
+      <option value=4 id="level4">Level 4</option>
+    </select>        
+  </div>
+  <div id='dvg_jeux'>
+    <div id='dg_point'>
+      <span id='point'>0</span>
+    </div>
+
+    <div id='menu'>
+
+      <div onclick='init_serpent();'>Démarrer</div>
+      
+    </div>
+    
+  </div>
+  <div id="section_script">
+  </div>
+</body>
+</html>

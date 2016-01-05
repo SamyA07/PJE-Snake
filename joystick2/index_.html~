@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<script>
+var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+       var deplacement = xhr.responseText;
+  	if(!deplacement){
+  		return;
+  	}
+        alert(deplacement);
+	if(k_serpent.antibug==1){
+		return false;
+	}
+	k_serpent.antibug=1;
+	
+	var touche=deplacement;//evt.keyCode;
+	
+	if(touche==39 && k_serpent.direction==37){
+		return false;
+	}
+	if(touche==37 && k_serpent.direction==39){
+		return false;
+	}
+	if(touche==40 && k_serpent.direction==38){
+		return false;
+	}
+	if(touche==38 && k_serpent.direction==40){
+		return false;
+	}
+	if(touche!=k_serpent.direction){
+		k_serpent.direction=touche;
+	}
+       alert(deplacement);
+  }
+xhr.open("GET","joystick");
+xhr.send();
+</script>
+</body>
+</html>
