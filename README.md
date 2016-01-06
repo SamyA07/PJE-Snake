@@ -14,4 +14,5 @@ Version du jeu snake avec joystick avec le bon usage du COMET -> très peu de re
 Page html : index.html ,
 Javascript : res/k_serpent.js ,
 Comet : res/joystick.c ,
-Dans cette version, on perd les fonctionnalités d'affichage de l'écran.
+Dans cette version, on perd les fonctionnalités d'affichage de l'écran. Cette version ne marche pas à tous les coups (1 fois sur 2), on
+ne sait pas pourquoi mais il faut donc recompiler plusieurs fois pour faire fonctionner le Snake. On se rend compte dans cette version qu'on a un minum de requêtes comparé à la version précédente.
